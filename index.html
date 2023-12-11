@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <!-- Step 1: User Information -->
+      <h2>Car DealerShip Form</h2>
+      <div class="step1">
+        <!-- Full Name Input -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required oninput="validateForm()" />
+        <br />
+        <div id="nameError" class="msg"></div>
+
+        <!-- Email Input -->
+        <label for="email">Email</label>
+        <input type="text" id="email" required oninput="validateForm()" />
+        <br />
+        <div id="emailError" class="msg"></div>
+
+        <!-- Phone Number Input -->
+        <label for="phoneNumber">Phone Number</label><br />
+        <input type="text" id="phoneNumber" required oninput="validateForm()" />
+        <div id="numberError" class="msg"></div>
+      </div>
+
+      <!-- Step 2: Car Model and Additional Features -->
+      <div class="step2 displayNone">
+        <!-- Car Model Dropdown -->
+        <label for="carModel">Car Model</label><br />
+        <select id="carModel">
+          <!-- Options for Car Models -->
+          <option value="Sedan">Sedan</option>
+          <option value="SUV">SUV</option>
+          <option value="Wagon">Wagon</option>
+          <option value="Truck">Truck</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Convertible">Convertible</option>
+          <option value="Vans">Vans</option>
+          <option value="Hatchback">Hatchback</option></select
+        ><br />
+
+        <!-- Additional Features Checkboxes -->
+        <div class="additionalFeatures">
+          <label for="additionalFeatures">Additional Features</label><br />
+          <input
+            type="checkbox"
+            id="Leather_Seats"
+            name="additionalFeatures"
+          /><label for="leatherSeats">Leather Seats</label><br />
+          <input
+            type="checkbox"
+            id="Sun_Roof"
+            name="additionalFeatures"
+          /><label for="sunroof">Sunroof</label><br />
+          <input
+            type="checkbox"
+            id="GPS_Navigation"
+            name="additionalFeatures"
+          /><label for="gpsNavigation">GPS Navigation</label><br />
+        </div>
+      </div>
+
+      <!-- Step 3: Trade-In Information -->
+      <div class="step3 displayNone">
+        <div class="tradeIn">
+          <!-- Trade-In Radio Buttons -->
+          <label for="tradeIn">Do you have a vehicle for trade-in?</label><br />
+          <input type="radio" id="yes" name="tradeIn" value="Yes" /><label
+            for="yes"
+            >Yes</label
+          ><br />
+          <input type="radio" id="no" name="tradeIn" value="No" /><label
+            for="no"
+            >No</label
+          ><br />
+        </div>
+
+        <!-- Trade-In Details Textarea -->
+        <label for="tradeInDetails">If yes, provide details (optional)</label
+        ><br />
+        <textarea id="tradeInDetails" rows="5" cols="15"></textarea>
+      </div>
+
+      <!-- Step 4: Display User Information -->
+      <div class="step4 displayNone">
+        <div id="showInfo">
+          <!-- Display User Information -->
+          <p>Name: <span id="displayName"></span></p>
+          <br />
+          <p>Email: <span id="displayEmail"></span></p>
+          <br />
+          <p>Phone no.: <span id="displayNumber"></span></p>
+          <br />
+          <p>Car Model: <span id="displayModel"></span></p>
+          <br />
+          <p>Additional Features:</p>
+          <pre id="displayFeatures"></pre>
+          <br />
+          <p>Do you have a vehicle for trade-in?</p>
+          <p id="displayTradeIn"></p>
+          <br />
+          <p id="tradeInDetailsLabel">Trade In Details</p>
+          <p id="displayDetails"></p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="buttons">
+        <input type="button" id="previous" value="Previous" disabled />
+        <input type="button" id="next" value="Next" />
+        <input type="submit" id="submit" class="displayNone" />
+        <br />
+      </div>
+    </form>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+* {
+  display: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* hide elements with this class */
+.displayNone {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1rem;
+  gap: 2rem;
+}
+
+form {
+  width: 330px;
+  padding: 10px;
+}
+
+/* title */
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.step1 input {
+  width: 100%;
+}
+
+input {
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+label {
+  padding: 10px 0;
+  font-size: 1.4rem;
+  pointer-events: none;
+  width: 100%;
+}
+
+.msg {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+
+.buttons input {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+#carModel {
+  max-width: 100%;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.step2 {
+  width: 100%;
+  padding: 10px;
+}
+
+.step2 label {
+  text-align: center;
+}
+
+.additionalFeatures input {
+  width: 20px;
+  height: 15px;
+  padding: 5px;
+}
+
+.step3 label {
+  font-size: 1.1rem;
+  padding: 5px 0;
+}
+
+#no {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+}
+
+/* display section */
+#showInfo {
+  font-size: 1.2rem;
+  padding: 5px;
+  width: 100%;
+}
